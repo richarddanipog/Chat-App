@@ -19,7 +19,11 @@ const Chat = ({ location }) => {
   const [users, setUsers] = useState([]);
   const [exsit, setExsit] = useState(false);
 
-  const ENDPOINT = "https://chat-applicatiion.herokuapp.com/";
+  // This is for Heroku deploy
+  // const ENDPOINT = "https://chat-applicatiion.herokuapp.com/";
+
+  // This is Local Server express js
+  const ENDPOINT = "http://localhost:5000";
 
   useEffect(() => {
     const { name, room } = queryString.parse(location.search);
